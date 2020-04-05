@@ -1,8 +1,3 @@
-// DONE: Need number of days in month
-// DONE: Create new row when 7 td have been created
-// DONE: Assign day num to day column
-// Fill previous month's days if needed
-
 const calendarBody = document.getElementById('calendarDates');
 
 const daysInMonth = new Date(2020, 4, 0).getDate();
@@ -12,6 +7,14 @@ let calendarDays = [];
 calendarDays[firstDay] = 1;
 
 // Create array with appropriate calendar dates
+let daysInLastMonth = new Date(2020, 3, 0).getDate();
+
+for (let i = firstDay - 1; i >= 0; i--) {
+  calendarDays[i] = daysInLastMonth;
+  daysInLastMonth--;
+}
+console.log(calendarDays);
+
 for (let i = 2; i <= daysInMonth; i++) {
   calendarDays.push(i);
 }
@@ -20,9 +23,7 @@ while (calendarDays.length % 7 !== 0) {
   calendarDays.push('');
 }
 
-console.log(firstDay);
-
-// Controlling number of table rows
+// Populating table rows
 for (let i = 0; i <= 6; i++) {
   if (dayCount > daysInMonth) {
     break;
@@ -30,7 +31,7 @@ for (let i = 0; i <= 6; i++) {
 
   row = document.createElement('tr');
 
-  // Controlling number of table columns
+  // Populating table columns
   for (let i = 0; i <= 6; i++) {
     cell = document.createElement('td');
     // Need -1 since dayCount starts at 1, not 0
