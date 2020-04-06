@@ -22,13 +22,17 @@ let dayCount = 1;
 let calendarDays = [];
 calendarDays[firstDay] = 1;
 
-//>>>>>>>>>>>>>> Populating calendar months in header
+//>>>>>>>>>>>>>> Populating calendar months
 let monthCells = document.querySelectorAll(
   "td[colspan = '2'], td[colspan = '3']"
 );
 monthCells[0].appendChild(document.createTextNode(months[currentMonth - 1]));
 monthCells[1].appendChild(document.createTextNode(months[currentMonth]));
 monthCells[2].appendChild(document.createTextNode(months[currentMonth + 1]));
+
+//>>>>>>>>>>>>>> Populating calendar year
+yearCell = document.querySelector('#calendarYear');
+yearCell.appendChild(document.createTextNode(`${new Date().getFullYear()}`));
 
 //>>>>>>>>>>>>>> Populating calendar
 // Create array with appropriate calendar dates
