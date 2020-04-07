@@ -20,7 +20,6 @@ const daysInMonth = new Date(2020, currentMonth + 1, 0).getDate();
 const firstDay = new Date(2020, currentMonth).getDay();
 let dayCount = 1;
 let calendarDays = [];
-calendarDays[firstDay] = 1;
 
 //>>>>>>>>>>>>>> Populating calendar months
 let monthCells = document.querySelectorAll(
@@ -36,6 +35,7 @@ yearCell.appendChild(document.createTextNode(`${new Date().getFullYear()}`));
 
 //>>>>>>>>>>>>>> Populating calendar
 // Create array with appropriate calendar dates
+calendarDays[firstDay] = 1;
 let daysInLastMonth = new Date(2020, currentMonth, 0).getDate();
 for (let i = firstDay - 1; i >= 0; i--) {
   calendarDays[i] = daysInLastMonth;
