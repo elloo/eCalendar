@@ -15,9 +15,10 @@ const months = [
   'December',
 ];
 const currentMonth = new Date().getMonth();
-// Assigning day argument to 0 retrieves date for last day of previous month
+// Assigning day argument to 0 retrieves date for last day of currentMonth
 const daysInMonth = new Date(2020, currentMonth + 1, 0).getDate();
 const firstDay = new Date(2020, currentMonth).getDay();
+const currentDate = new Date();
 let dayCount = 1;
 let calendarDays = [];
 
@@ -54,7 +55,6 @@ for (let i = 0; i <= 6; i++) {
     break;
   }
   row = document.createElement('tr');
-
   // Populating table columns
   for (let i = 0; i <= 6; i++) {
     cell = document.createElement('td');
@@ -64,6 +64,14 @@ for (let i = 0; i <= 6; i++) {
     row.appendChild(cell);
     dayCount++;
   }
-
   calendarBody.appendChild(row);
 }
+
+//>>>>>>>>>>>>>> Populating event day of week
+const options = { weekday: 'long' };
+const currentDay = new Intl.DateTimeFormat('en-AU', options).format(
+  currentDate
+);
+const eventDay = document.querySelector('#eventDay');
+eventDay.appendChild(document.createTextNode(currentDay));
+
