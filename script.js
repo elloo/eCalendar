@@ -1,5 +1,4 @@
-const calendarBody = document.getElementById('calendarDates');
-const calendarMonths = document.getElementById('calendarMonths');
+//>>>>>>>>>>>>>> Populating calendar months
 const months = [
   'January',
   'February',
@@ -15,14 +14,6 @@ const months = [
   'December',
 ];
 const currentMonth = new Date().getMonth();
-// Assigning day argument to 0 retrieves date for last day of currentMonth
-const daysInMonth = new Date(2020, currentMonth + 1, 0).getDate();
-const firstDay = new Date(2020, currentMonth).getDay();
-const currentDate = new Date();
-let dayCount = 1;
-let calendarDays = [];
-
-//>>>>>>>>>>>>>> Populating calendar months
 let monthCells = document.querySelectorAll(
   "td[colspan = '2'], td[colspan = '3']"
 );
@@ -31,11 +22,15 @@ monthCells[1].appendChild(document.createTextNode(months[currentMonth]));
 monthCells[2].appendChild(document.createTextNode(months[currentMonth + 1]));
 
 //>>>>>>>>>>>>>> Populating calendar year
-yearCell = document.querySelector('#calendarYear');
+const yearCell = document.querySelector('#calendarYear');
 yearCell.appendChild(document.createTextNode(`${new Date().getFullYear()}`));
 
 //>>>>>>>>>>>>>> Populating calendar
 // Create array with appropriate calendar dates
+// Assigning day argument to 0 retrieves date for last day of currentMonth
+const daysInMonth = new Date(2020, currentMonth + 1, 0).getDate();
+const firstDay = new Date(2020, currentMonth).getDay();
+let calendarDays = [];
 calendarDays[firstDay] = 1;
 let daysInLastMonth = new Date(2020, currentMonth, 0).getDate();
 for (let i = firstDay - 1; i >= 0; i--) {
@@ -50,6 +45,8 @@ while (calendarDays.length % 7 !== 0) {
 }
 
 // Populating table rows
+const calendarBody = document.getElementById('calendarDates');
+let dayCount = 1;
 for (let i = 0; i <= 6; i++) {
   if (dayCount > daysInMonth) {
     break;
@@ -68,10 +65,14 @@ for (let i = 0; i <= 6; i++) {
 }
 
 //>>>>>>>>>>>>>> Populating event day of week
+const currentDate = new Date();
 const options = { weekday: 'long' };
 const currentDay = new Intl.DateTimeFormat('en-AU', options).format(
   currentDate
 );
-const eventDay = document.querySelector('#eventDay');
+const eventDay = document.getElementById('eventDay');
 eventDay.appendChild(document.createTextNode(currentDay));
 
+//>>>>>>>>>>>>>> Populating event month and date
+const eventDate = document.getElementById('eventDate');
+// let monthDate =
