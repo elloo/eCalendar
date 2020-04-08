@@ -13,7 +13,8 @@ const months = [
   'November',
   'December',
 ];
-const currentMonth = new Date().getMonth();
+const currentDate = new Date();
+const currentMonth = currentDate.getMonth();
 let monthCells = document.querySelectorAll(
   "td[colspan = '2'], td[colspan = '3']"
 );
@@ -23,7 +24,7 @@ monthCells[2].appendChild(document.createTextNode(months[currentMonth + 1]));
 
 //>>>>>>>>>>>>>> Populating calendar year
 const yearCell = document.querySelector('#calendarYear');
-yearCell.appendChild(document.createTextNode(`${new Date().getFullYear()}`));
+yearCell.appendChild(document.createTextNode(`${currentDate.getFullYear()}`));
 
 //>>>>>>>>>>>>>> Populating calendar
 // Create array with appropriate calendar dates
@@ -65,7 +66,6 @@ for (let i = 0; i <= 6; i++) {
 }
 
 //>>>>>>>>>>>>>> Populating event day of week
-const currentDate = new Date();
 const options = { weekday: 'long' };
 const currentDay = new Intl.DateTimeFormat('en-AU', options).format(
   currentDate
@@ -75,4 +75,8 @@ eventDay.appendChild(document.createTextNode(currentDay));
 
 //>>>>>>>>>>>>>> Populating event month and date
 const eventDate = document.getElementById('eventDate');
-// let monthDate =
+const currentDayNum = currentDate.getDate();
+let monthDate = document.createTextNode(
+  `${months[currentMonth] + ' ' + currentDayNum}`
+);
+eventDate.appendChild(monthDate);
