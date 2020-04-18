@@ -66,7 +66,9 @@ for (let i = 0; i <= 6; i++) {
 }
 
 //>>>>>>>>>>>>>> Populating event day of week
-const options = { weekday: 'long' };
+const options = {
+  weekday: 'long'
+};
 const currentDay = new Intl.DateTimeFormat('en-AU', options).format(
   currentDate
 );
@@ -80,3 +82,10 @@ let monthDate = document.createTextNode(
   `${months[currentMonth] + ' ' + currentDayNum}`
 );
 eventDate.appendChild(monthDate);
+
+//>>>>>>>>>>>>>> Open modal
+const addEventBtn = document.getElementById('addEvent')
+const eventDialog = document.getElementById('eventDialog')
+addEventBtn.addEventListener('click', function () {
+  eventDialog.showModal()
+})
