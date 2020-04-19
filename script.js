@@ -91,8 +91,9 @@ addEventBtn.addEventListener('click', function () {
 })
 
 //>>>>>>>>>>>>>> Close modal on blur
-window.addEventListener('click', function (event) {
-  if (event.target == eventDialog) {
+eventDialog.addEventListener('click', function (event) {
+  // eventDialog covers entire screen except for form
+  if (event.target === eventDialog) {
     eventDialog.close()
   }
 })

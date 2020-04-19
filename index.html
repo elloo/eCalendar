@@ -7,6 +7,7 @@
       src="https://kit.fontawesome.com/819b9cc0a5.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>eCalendar</title>
   </head>
 
@@ -59,16 +60,16 @@
       </table>
       <button id="addEvent">Add an Event</button>
       <dialog id="eventDialog">
-        <h1>Event</h1>
         <form method="dialog">
+          <h1>Event</h1>
           <label
             >Start Date
-            <input type="text" placeholder="Month" />
-            <input type="text" placeholder="Day" />
+            <input type="dropdown" placeholder="Month" />
+            <input type="date" placeholder="Day" />
           </label>
           <label>
             End Date
-            <input type="text" placeholder="Month" />
+            <input type="month" placeholder="Month" />
             <input type="text" placeholder="Day" />
           </label>
           <br />
