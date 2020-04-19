@@ -89,3 +89,10 @@ const eventDialog = document.getElementById('eventDialog')
 addEventBtn.addEventListener('click', function () {
   eventDialog.showModal()
 })
+
+//>>>>>>>>>>>>>> Close modal on blur
+window.addEventListener('click', function (event) {
+  if (event.target == eventDialog) {
+    eventDialog.close()
+  }
+})
