@@ -1,3 +1,5 @@
+//>>>>>>>>>>>>>> CALENDAR
+
 //>>>>>>>>>>>>>> Populating calendar months
 const months = [
   'January',
@@ -74,6 +76,8 @@ const currentDay = new Intl.DateTimeFormat('en-AU', options).format(
 );
 const eventDay = document.getElementById('eventDay');
 eventDay.appendChild(document.createTextNode(currentDay));
+
+//>>>>>>>>>>>>>> EVENT MODAL
 
 //>>>>>>>>>>>>>> Populating event month and date
 const eventDate = document.getElementById('eventDate');
