@@ -101,3 +101,33 @@ eventDialog.addEventListener('click', function (event) {
     eventDialog.close()
   }
 })
+
+//>>>>>>>>>>>>>> Populate dropdown for months
+const monthsDropdowns = document.querySelectorAll('.months')
+Array.from(monthsDropdowns, element => {
+  let option = document.createElement('option')
+  option.setAttribute('selected', '')
+  option.setAttribute('disabled', '')
+  option.appendChild(document.createTextNode('Months'))
+  element.appendChild(option)
+  for (i = 0; i < months.length; i++) {
+    let option = document.createElement('option')
+    option.appendChild(document.createTextNode(months[i]))
+    element.appendChild(option)
+  }
+})
+
+//>>>>>>>>>>>>>> Populate dropdown for days
+const daysDropdowns = document.querySelectorAll('.days')
+Array.from(daysDropdowns, element => {
+  let option = document.createElement('option')
+  option.appendChild(document.createTextNode('Days'))
+  option.setAttribute('selected', '')
+  option.setAttribute('disabled', '')
+  element.appendChild(option)
+  for (i = 1; i <= 31; i++) {
+    let option = document.createElement('option')
+    option.appendChild(document.createTextNode(i))
+    element.appendChild(option)
+  }
+})
