@@ -36,9 +36,11 @@ const firstDay = new Date(2020, currentMonth).getDay();
 let calendarDays = [];
 calendarDays[firstDay] = 1;
 let daysInLastMonth = new Date(2020, currentMonth, 0).getDate();
+let daysInLastMonthCount = 0;
 for (let i = firstDay - 1; i >= 0; i--) {
   calendarDays[i] = daysInLastMonth;
   daysInLastMonth--;
+  daysInLastMonthCount++;
 }
 for (let i = 2; i <= daysInMonth; i++) {
   calendarDays.push(i);
@@ -52,13 +54,24 @@ const calendarBody = document.getElementById('calendarDates');
 let dayCount = 1;
 for (let i = 0; i <= 6; i++) {
   if (dayCount > daysInMonth) {
-    break;
+    break
   }
   row = document.createElement('tr');
   // Populating table columns
   for (let i = 0; i <= 6; i++) {
     cell = document.createElement('td');
-    // Need -1 since dayCount starts at 1, not 0
+    cell.setAttribute("class", "day")
+
+    // Styling weekend
+    if (i === 0 || i === 6) {
+      cell.setAttribute("class", "weekend")
+    }
+    // Styling previous month's days
+    if (daysInLastMonthCount > 0) {
+      cell.setAttribute("class", "lastMonthDay")
+      daysInLastMonthCount--
+    }
+
     cellData = document.createTextNode(calendarDays[dayCount - 1]);
     cell.appendChild(cellData);
     row.appendChild(cell);

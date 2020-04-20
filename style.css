@@ -1,3 +1,15 @@
 #eventDialog {
     padding: 0
 }
+
+.day {
+    color: #839395
+}
+
+.weekend {
+    color: #7cc0c9
+}
+
+.lastMonthDay {
+    color: #696868
+}
