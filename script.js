@@ -104,7 +104,7 @@ eventDialog.addEventListener('click', function (event) {
 
 //>>>>>>>>>>>>>> Populate dropdown for months
 const monthsDropdowns = document.querySelectorAll('.months')
-let defaultOption = (name) => {
+const defaultOption = (name) => {
   let option = document.createElement('option')
   option.setAttribute('selected', '')
   option.setAttribute('disabled', '')
