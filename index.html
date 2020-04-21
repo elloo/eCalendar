@@ -1,89 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/819b9cc0a5.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>eCalendar</title>
-  </head>
 
-  <body>
-    <section>
-      <header>
-        <h1>eCalendar</h1>
-        <h2 id="calendarYear"></h2>
-      </header>
-      <main>
-        <table>
-          <thead>
-            <tr id="calendarMonths">
-              <td colspan="2"></td>
-              <td colspan="3"></td>
-              <td colspan="2"></td>
-            </tr>
-            <tr>
-              <td>Sun</td>
-              <td>Mon</td>
-              <td>Tue</td>
-              <td>Wed</td>
-              <td>Thu</td>
-              <td>Fri</td>
-              <td>Sat</td>
-            </tr>
-          </thead>
-          <tbody id="calendarDates"></tbody>
-        </table>
-      </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/819b9cc0a5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>eCalendar</title>
+</head>
+
+<body>
+  <section>
+    <header>
+      <h1>eCalendar</h1>
+      <h2 id="calendarYear"></h2>
+    </header>
+    <main>
       <nav><i class="fas fa-angle-left fa-2x"></i></nav>
-      <nav><i class="fas fa-angle-right fa-2x"></i></nav>
-    </section>
-    <section>
-      <h2 id="eventDay"></h2>
-      <h1 id="eventDate"></h1>
       <table>
-        <tr>
-          <td>5</td>
-          <td>Dentist Appointment</td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>Ashley's Birthday</td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td>Proposal Date</td>
-        </tr>
+        <thead>
+          <tr id="calendarMonths">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td>Sun</td>
+            <td>Mon</td>
+            <td>Tue</td>
+            <td>Wed</td>
+            <td>Thu</td>
+            <td>Fri</td>
+            <td>Sat</td>
+          </tr>
+        </thead>
+        <tbody id="calendarDates"></tbody>
       </table>
-      <button id="addEvent">Add an Event</button>
-      <dialog id="eventDialog">
-        <form method="dialog">
-          <h1>Event</h1>
-          <label
-            >Start Date
-            <select name="startMonth" class="months"> </select>
-            <select name="startDay" class="days"> </select>
-          </label>
-          <label>
-            End Date
-            <select name="endMonth" class="months"> </select>
-            <select name="endDay" class="days"> </select>
-          </label>
-          <br />
-          <i class="fas fa-user-plus"></i
-          ><input type="text" placeholder="People" /><br />
-          <i class="far fa-compass"></i
-          ><input type="text" placeholder="Location" /><br />
-          <i class="fas fa-align-justify"></i
-          ><input type="text" placeholder="Description" /><br />
-          <input type="submit" value="Save Event" />
-        </form>
-      </dialog>
-    </section>
-  </body>
+      <nav><i class="fas fa-angle-right fa-2x"></i></nav>
+    </main>
+  </section>
+  <section>
+    <h2 id="eventDay"></h2>
+    <h1 id="eventDate"></h1>
+    <table>
+      <tr>
+        <td>5</td>
+        <td>Dentist Appointment</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>Ashley's Birthday</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>Proposal Date</td>
+      </tr>
+    </table>
+    <button id="addEvent">Add an Event</button>
+    <dialog id="eventDialog">
+      <form method="dialog">
+        <h1>Event</h1>
+        <label>Start Date
+          <select name="startMonth" class="months"> </select>
+          <select name="startDay" class="days"> </select>
+        </label>
+        <label>
+          End Date
+          <select name="endMonth" class="months"> </select>
+          <select name="endDay" class="days"> </select>
+        </label>
+        <br />
+        <i class="fas fa-user-plus"></i><input type="text" placeholder="People" /><br />
+        <i class="far fa-compass"></i><input type="text" placeholder="Location" /><br />
+        <i class="fas fa-align-justify"></i><input type="text" placeholder="Description" /><br />
+        <input type="submit" value="Save Event" />
+      </form>
+    </dialog>
+  </section>
+</body>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
 </html>

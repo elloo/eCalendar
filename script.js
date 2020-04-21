@@ -113,6 +113,7 @@ eventDialog.addEventListener('click', function (event) {
   if (event.target === eventDialog) {
     eventDialog.close()
   }
+  console.log(event.target)
 })
 
 //>>>>>>>>>>>>>> Populate dropdown for months
