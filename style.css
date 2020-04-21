@@ -18,6 +18,10 @@ form {
   color: #839395;
 }
 
+#currentDay {
+  color: #26b9cc;
+}
+
 body,
 main {
   display: flex;

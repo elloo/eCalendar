@@ -60,8 +60,9 @@ for (let i = 0; i <= 6; i++) {
   // Populating table columns
   for (let i = 0; i <= 6; i++) {
     cell = document.createElement('td');
-    cell.setAttribute("class", "day")
 
+    // Styling weekdays
+    cell.setAttribute("class", "day")
     // Styling weekend
     if (i === 0 || i === 6) {
       cell.setAttribute("class", "weekend")
@@ -71,6 +72,9 @@ for (let i = 0; i <= 6; i++) {
       cell.setAttribute("class", "lastMonthDay")
       daysInLastMonthCount--
     }
+    // Styling current day
+    const currentDay = document.querySelector(`#calendarDays td:nth-child(${currentDate.getDay() + 1})`)
+    currentDay.setAttribute("id", "currentDay")
 
     cellData = document.createTextNode(calendarDays[dayCount - 1]);
     cell.appendChild(cellData);
