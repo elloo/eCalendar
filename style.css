@@ -26,6 +26,12 @@ form {
   color: #26b9cc;
 }
 
+#today {
+  background-color: #26b9cc;
+  color: white;
+  border-radius: 50%;
+}
+
 /* FLEXBOX STYLING */
 
 body,

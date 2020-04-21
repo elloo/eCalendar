@@ -60,13 +60,15 @@ for (let i = 0; i <= 6; i++) {
   // Populating table columns
   for (let i = 0; i <= 6; i++) {
     cell = document.createElement('td');
+    cellData = document.createTextNode(calendarDays[dayCount - 1]);
+    cell.appendChild(cellData);
+    row.appendChild(cell);
+    dayCount++;
 
     // Styling weekdays
     cell.setAttribute("class", "day")
     // Styling weekend
-    if (i === 0 || i === 6) {
-      cell.setAttribute("class", "weekend")
-    }
+    if (i === 0 || i === 6) cell.setAttribute("class", "weekend")
     // Styling previous month's days
     if (daysInLastMonthCount > 0) {
       cell.setAttribute("class", "lastMonthDay")
@@ -75,11 +77,7 @@ for (let i = 0; i <= 6; i++) {
     // Styling current day
     const currentDay = document.querySelector(`#calendarDays td:nth-child(${currentDate.getDay() + 1})`)
     currentDay.setAttribute("id", "currentDay")
-
-    cellData = document.createTextNode(calendarDays[dayCount - 1]);
-    cell.appendChild(cellData);
-    row.appendChild(cell);
-    dayCount++;
+    if (cell.innerText === '21') cell.setAttribute("id", "today")
   }
   calendarBody.appendChild(row);
 }
@@ -117,7 +115,6 @@ eventDialog.addEventListener('click', function (event) {
   if (event.target === eventDialog) {
     eventDialog.close()
   }
-  console.log(event.target)
 })
 
 //>>>>>>>>>>>>>> Populate dropdown for months
