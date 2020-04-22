@@ -39,43 +39,45 @@
       <nav><i class="fas fa-angle-right fa-2x"></i></nav>
     </main>
   </section>
-  <section>
-    <h2 id="eventDay"></h2>
-    <h1 id="eventDate"></h1>
-    <table>
-      <tr>
-        <td>5</td>
-        <td>Dentist Appointment</td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>Ashley's Birthday</td>
-      </tr>
-      <tr>
-        <td>23</td>
-        <td>Proposal Date</td>
-      </tr>
-    </table>
-    <button id="addEvent">Add an Event</button>
-    <dialog id="eventDialog">
-      <form method="dialog">
-        <h1>Event</h1>
-        <label>Start Date
-          <select name="startMonth" class="months"> </select>
-          <select name="startDay" class="days"> </select>
-        </label>
-        <label>
-          End Date
-          <select name="endMonth" class="months"> </select>
-          <select name="endDay" class="days"> </select>
-        </label>
-        <br />
-        <i class="fas fa-user-plus"></i><input type="text" placeholder="People" /><br />
-        <i class="far fa-compass"></i><input type="text" placeholder="Location" /><br />
-        <i class="fas fa-align-justify"></i><input type="text" placeholder="Description" /><br />
-        <input type="submit" value="Save Event" />
-      </form>
-    </dialog>
+  <section id="events">
+    <div>
+      <h2 id="eventDay"></h2>
+      <h1 id="eventDate"></h1>
+      <table>
+        <tr>
+          <td>5</td>
+          <td>Dentist Appointment</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Ashley's Birthday</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Proposal Date</td>
+        </tr>
+      </table>
+      <button id="addEvent">Add an Event</button>
+      <dialog id="eventDialog">
+        <form method="dialog">
+          <h1>Event</h1>
+          <label>Start Date
+            <select name="startMonth" class="months"> </select>
+            <select name="startDay" class="days"> </select>
+          </label>
+          <label>
+            End Date
+            <select name="endMonth" class="months"> </select>
+            <select name="endDay" class="days"> </select>
+          </label>
+          <br />
+          <i class="fas fa-user-plus"></i><input type="text" placeholder="People" /><br />
+          <i class="far fa-compass"></i><input type="text" placeholder="Location" /><br />
+          <i class="fas fa-align-justify"></i><input type="text" placeholder="Description" /><br />
+          <input type="submit" value="Save Event" />
+        </form>
+      </dialog>
+    </div>
   </section>
 </body>
 

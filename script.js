@@ -77,7 +77,7 @@ for (let i = 0; i <= 6; i++) {
     // Styling current day
     const currentDay = document.querySelector(`#calendarDays td:nth-child(${currentDate.getDay() + 1})`)
     currentDay.setAttribute("id", "currentDay")
-    if (cell.innerText === '21') cell.setAttribute("id", "today")
+    if (cell.innerText === currentDate.getDate().toString()) cell.setAttribute("id", "today")
   }
   calendarBody.appendChild(row);
 }

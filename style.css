@@ -1,11 +1,7 @@
-/* MODAL STYLING */
-
-#eventDialog {
-  padding: 0;
-}
-
-form {
-  border: solid 1px black;
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* CALENDAR STYLING */
@@ -32,7 +28,35 @@ form {
   border-radius: 50%;
 }
 
-/* FLEXBOX STYLING */
+/* EVENTS STYLING */
+#events {
+  background: url('assets/mountain.jpg') no-repeat;
+  background-size: cover;
+  color: white;
+}
+#events > div {
+  background: linear-gradient(
+      180deg,
+      rgba(209, 226, 188, 0.9) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    rgba(160, 236, 247, 0.5);
+  height: 100vh;
+}
+#eventDay {
+  margin: 0 auto;
+}
+/* MODAL STYLING */
+
+#eventDialog {
+  padding: 0;
+}
+
+form {
+  border: solid 1px black;
+}
+
+/* FLEXBOX */
 
 body,
 main {
