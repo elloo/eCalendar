@@ -2,33 +2,50 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
+  font-family: 'Montserrat', sans-serif;
 }
-
+header {
+  color: #26b9cc;
+}
+i {
+  color: #26b9cc;
+}
 /* CALENDAR STYLING */
 
+header > h2 {
+  font-weight: 400;
+}
 .day {
   color: #696868;
 }
-
 .weekend {
   color: #7cc0c9;
 }
-
 .lastMonthDay {
   color: #839395;
 }
-
 #currentDay {
   color: #26b9cc;
 }
-
 #today {
   background-color: #26b9cc;
   color: white;
   border-radius: 50%;
 }
+#calendarMonths {
+  color: #26b9cc;
+}
+#calendarMonths > td {
+  border-bottom: 1px solid black;
+}
+#calendarDates td {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
 
 /* EVENTS STYLING */
+
 #events {
   background: url('assets/mountain.jpg') no-repeat;
   background-size: cover;
@@ -43,15 +60,18 @@ body {
     rgba(160, 236, 247, 0.5);
   height: 100vh;
 }
+#events tr:first-child {
+  border-right: 3px solid red;
+}
 #eventDay {
   margin: 0 auto;
 }
+
 /* MODAL STYLING */
 
 #eventDialog {
   padding: 0;
 }
-
 form {
   border: solid 1px black;
 }
@@ -59,8 +79,12 @@ form {
 /* FLEXBOX */
 
 body,
-main {
+main,
+header {
   display: flex;
+}
+header {
+  justify-content: space-between;
 }
 
 @media all and (max-width: 500px) {
