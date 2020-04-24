@@ -4,40 +4,77 @@ body {
   width: 100vw;
   font-family: 'Montserrat', sans-serif;
 }
-header {
-  color: #26b9cc;
-}
+
 i {
   color: #26b9cc;
 }
+
 /* CALENDAR STYLING */
 
-header > h2 {
-  font-weight: 400;
+nav {
+  padding: 0 40px;
+  margin: auto;
 }
+
+thead th:nth-child(1) {
+  color: #26b9cc;
+  text-align: left;
+}
+
+
+thead th:nth-child(2) {
+  color: #26b9cc;
+  text-align: right;
+  font-weight: 400px;
+}
+
 .day {
   color: #696868;
 }
+
 .weekend {
   color: #7cc0c9;
 }
+
 .lastMonthDay {
   color: #839395;
 }
+
 #currentDay {
   color: #26b9cc;
 }
+
 #today {
   background-color: #26b9cc;
   color: white;
   border-radius: 50%;
 }
+
 #calendarMonths {
   color: #26b9cc;
 }
-#calendarMonths > td {
+
+#calendarMonths>td {
   border-bottom: 1px solid black;
 }
+
+#calendarMonths>td:nth-child(1) {
+  text-align: right;
+}
+
+#calendarMonths>td:nth-child(2) {
+  text-align: center;
+}
+
+#calendarMonths>td:nth-child(3) {
+  text-align: left;
+}
+
+#calendarDays {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 #calendarDates td {
   height: 50px;
   width: 50px;
@@ -51,18 +88,42 @@ header > h2 {
   background-size: cover;
   color: white;
 }
-#events > div {
-  background: linear-gradient(
-      180deg,
+
+#addEvent {
+  text-transform: capitalize;
+}
+
+#addEvent i {
+  color: white;
+}
+
+#events>div {
+  background: linear-gradient(180deg,
       rgba(209, 226, 188, 0.9) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
+      rgba(255, 255, 255, 0) 100%),
     rgba(160, 236, 247, 0.5);
   height: 100vh;
 }
-#events tr:first-child {
-  border-right: 3px solid red;
+
+#events table {
+  border-collapse: collapse;
+  margin: 0 30px;
 }
+
+#events td {
+  padding: 10px;
+  font-style: italic;
+}
+
+#events td:nth-child(1) {
+  border-right: 3px solid white;
+  font-weight: 600;
+}
+
+#events td:nth-child(2) {
+  background-color: rgba(0 0 0 / 0.2);
+}
+
 #eventDay {
   margin: 0 auto;
 }
@@ -72,6 +133,7 @@ header > h2 {
 #eventDialog {
   padding: 0;
 }
+
 form {
   border: solid 1px black;
 }
@@ -83,6 +145,7 @@ main,
 header {
   display: flex;
 }
+
 header {
   justify-content: space-between;
 }
