@@ -16,13 +16,12 @@ nav {
   margin: auto;
 }
 
-thead th:nth-child(1) {
+#calendarHead th:nth-child(1) {
   color: #26b9cc;
   text-align: left;
 }
 
-
-thead th:nth-child(2) {
+#calendarHead th:nth-child(2) {
   color: #26b9cc;
   text-align: right;
   font-weight: 400px;
@@ -50,23 +49,28 @@ thead th:nth-child(2) {
   border-radius: 50%;
 }
 
-#calendarMonths {
-  color: #26b9cc;
+#calendarYear {
+  font-weight: 400;
 }
 
-#calendarMonths>td {
+#calendarMonths {
+  color: #26b9cc;
+  text-transform: uppercase;
+}
+
+#calendarMonths > td {
   border-bottom: 1px solid black;
 }
 
-#calendarMonths>td:nth-child(1) {
+#calendarMonths > td:nth-child(1) {
   text-align: right;
 }
 
-#calendarMonths>td:nth-child(2) {
+#calendarMonths > td:nth-child(2) {
   text-align: center;
 }
 
-#calendarMonths>td:nth-child(3) {
+#calendarMonths > td:nth-child(3) {
   text-align: left;
 }
 
@@ -97,17 +101,19 @@ thead th:nth-child(2) {
   color: white;
 }
 
-#events>div {
-  background: linear-gradient(180deg,
+#events > div {
+  background: linear-gradient(
+      180deg,
       rgba(209, 226, 188, 0.9) 0%,
-      rgba(255, 255, 255, 0) 100%),
+      rgba(255, 255, 255, 0) 100%
+    ),
     rgba(160, 236, 247, 0.5);
   height: 100vh;
 }
 
 #events table {
-  border-collapse: collapse;
-  margin: 0 30px;
+  border-spacing: 40px 0;
+  width: 15vw;
 }
 
 #events td {

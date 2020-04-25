@@ -1,96 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/819b9cc0a5.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <title>eCalendar</title>
-  </head>
 
-  <body>
-    <section>
-      <main>
-        <nav><i class="fas fa-angle-left fa-2x"></i></nav>
-        <table>
-          <thead>
-            <tr>
-              <th colspan="4"><h1>eCalendar</h1></th>
-              <th colspan="3"><h2 id="calendarYear"></h2></th>
-            </tr>
-            <tr id="calendarMonths">
-              <td colspan="2"></td>
-              <td colspan="3"></td>
-              <td colspan="2"></td>
-            </tr>
-            <tr id="calendarDays">
-              <td>Sun</td>
-              <td>Mon</td>
-              <td>Tue</td>
-              <td>Wed</td>
-              <td>Thu</td>
-              <td>Fri</td>
-              <td>Sat</td>
-            </tr>
-          </thead>
-          <tbody id="calendarDates"></tbody>
-        </table>
-        <nav><i class="fas fa-angle-right fa-2x"></i></nav>
-      </main>
-    </section>
-    <section id="events">
-      <!-- Needed to position gradient over image -->
-      <div>
-        <h2 id="eventDay"></h2>
-        <h1 id="eventDate"></h1>
-        <table>
-          <tr>
-            <td>5</td>
-            <td>Dentist Appointment</td>
-          </tr>
-          <tr>
-            <td>18</td>
-            <td>Ashley's Birthday</td>
-          </tr>
-          <tr>
-            <td>23</td>
-            <td>Proposal Date</td>
-          </tr>
-        </table>
-        <p id="addEvent">Add An Event <i class="fas fa-plus-circle"></i></p>
-        <dialog id="eventDialog">
-          <form method="dialog">
-            <h1>Event</h1>
-            <label
-              >Start Date
-              <select name="startMonth" class="months"> </select>
-              <select name="startDay" class="days"> </select>
-            </label>
-            <label>
-              End Date
-              <select name="endMonth" class="months"> </select>
-              <select name="endDay" class="days"> </select>
-            </label>
-            <br />
-            <i class="fas fa-user-plus"></i
-            ><input type="text" placeholder="People" /><br />
-            <i class="far fa-compass"></i
-            ><input type="text" placeholder="Location" /><br />
-            <i class="fas fa-align-justify"></i
-            ><input type="text" placeholder="Description" /><br />
-            <input type="submit" value="Save Event" />
-          </form>
-        </dialog>
-      </div>
-    </section>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/819b9cc0a5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet" />
+  <title>eCalendar</title>
+</head>
 
-  <script src="script.js"></script>
+<body>
+  <section id="calendar">
+    <main>
+      <nav><i class="fas fa-angle-left fa-2x"></i></nav>
+      <table>
+        <thead id="calendarHead">
+          <tr>
+            <th colspan="4">
+              <h1>eCalendar</h1>
+            </th>
+            <th colspan="3">
+              <h2 id="calendarYear"></h2>
+            </th>
+          </tr>
+          <tr id="calendarMonths">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td colspan="2"></td>
+          </tr>
+          <tr id="calendarDays">
+            <td>Sun</td>
+            <td>Mon</td>
+            <td>Tue</td>
+            <td>Wed</td>
+            <td>Thu</td>
+            <td>Fri</td>
+            <td>Sat</td>
+          </tr>
+        </thead>
+        <tbody id="calendarDates"></tbody>
+      </table>
+      <nav><i class="fas fa-angle-right fa-2x"></i></nav>
+    </main>
+  </section>
+  <section id="events">
+    <!-- Needed to position gradient over image -->
+    <div>
+      <table>
+        <thead id="eventHead">
+          <tr>
+            <th colspan="2">
+              <h2 id="eventDay"></h2>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="2">
+              <h1 id="eventDate"></h1>
+            </th>
+          </tr>
+        </thead>
+        <tr>
+          <td>5</td>
+          <td>Dentist Appointment</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Ashley's Birthday</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Proposal Date</td>
+        </tr>
+      </table>
+      <p id="addEvent">Add An Event <i class="fas fa-plus-circle"></i></p>
+      <dialog id="eventDialog">
+        <form method="dialog">
+          <h1>Event</h1>
+          <label>Start Date
+            <select name="startMonth" class="months"> </select>
+            <select name="startDay" class="days"> </select>
+          </label>
+          <label>
+            End Date
+            <select name="endMonth" class="months"> </select>
+            <select name="endDay" class="days"> </select>
+          </label>
+          <br />
+          <i class="fas fa-user-plus"></i><input type="text" placeholder="People" /><br />
+          <i class="far fa-compass"></i><input type="text" placeholder="Location" /><br />
+          <i class="fas fa-align-justify"></i><input type="text" placeholder="Description" /><br />
+          <input type="submit" value="Save Event" />
+        </form>
+      </dialog>
+    </div>
+  </section>
+</body>
+
+<script src="script.js"></script>
+
 </html>
