@@ -49,6 +49,10 @@ nav {
   border-radius: 50%;
 }
 
+#calendar table {
+  border-collapse: collapse;
+}
+
 #calendarYear {
   font-weight: 400;
 }
@@ -68,6 +72,7 @@ nav {
 
 #calendarMonths > td:nth-child(2) {
   text-align: center;
+  font-weight: 600;
 }
 
 #calendarMonths > td:nth-child(3) {
@@ -77,6 +82,7 @@ nav {
 #calendarDays {
   text-align: center;
   text-transform: uppercase;
+  color: #839395;
 }
 
 #calendarDates td {
@@ -95,6 +101,9 @@ nav {
 
 #addEvent {
   text-transform: capitalize;
+  text-align: right;
+  margin: 40px;
+  cursor: pointer;
 }
 
 #addEvent i {
@@ -113,11 +122,11 @@ nav {
 
 #events table {
   border-spacing: 40px 0;
-  width: 15vw;
+  width: 25vw;
 }
 
 #events td {
-  padding: 10px;
+  padding: 10px 10px 20px 15px;
   font-style: italic;
 }
 
@@ -131,7 +140,16 @@ nav {
 }
 
 #eventDay {
-  margin: 0 auto;
+  margin: 40px auto 5px;
+  font-weight: 200;
+  text-align: left;
+}
+
+#eventDate {
+  text-align: left;
+  margin: 0 0 40px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 /* MODAL STYLING */
@@ -140,8 +158,13 @@ nav {
   padding: 0;
 }
 
+.fa-times {
+  color: #839395;
+}
+
 form {
   border: solid 1px black;
+  color: #839395;
 }
 
 /* FLEXBOX */
