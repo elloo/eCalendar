@@ -116,6 +116,10 @@ eventDialog.addEventListener('click', function (event) {
     eventDialog.close()
   }
 })
+const timesIcon = document.querySelector('.fa-times')
+timesIcon.addEventListener('click', function (event) {
+  eventDialog.close()
+})
 
 //>>>>>>>>>>>>>> Populate dropdown for months
 const monthsDropdowns = document.querySelectorAll('.months')

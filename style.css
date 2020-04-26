@@ -167,13 +167,12 @@ nav {
   color: #839395;
   float: right;
 }
+.fa-times:hover {
+  cursor: pointer;
+}
 dialog {
   border: none;
   box-shadow: 1px 1px 5px #839395, -1px -1px 5px #839395;
-}
-
-dialog::backdrop {
-  background: rgba(0 0 0, 0.9);
 }
 form {
   border: solid 1px white;
