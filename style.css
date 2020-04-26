@@ -85,6 +85,11 @@ nav {
   color: #839395;
 }
 
+#calendarMonths td,
+#calendarDays td {
+  padding: 15px 0 5px;
+}
+
 #calendarDates td {
   height: 50px;
   width: 50px;
@@ -160,6 +165,7 @@ nav {
 
 .fa-times {
   color: #839395;
+  text-align: right;
 }
 
 form {
@@ -179,8 +185,16 @@ header {
   justify-content: space-between;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 800px) {
   body {
     flex-direction: column;
+  }
+
+  section {
+    margin: 10px;
+  }
+
+  #events table {
+    margin: 0 auto;
   }
 }
