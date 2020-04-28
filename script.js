@@ -131,7 +131,7 @@ const defaultOption = (name) => {
   return option
 }
 Array.from(monthsDropdowns, element => {
-  element.appendChild(defaultOption('Months'))
+  element.appendChild(defaultOption('Month'))
   for (i = 0; i < months.length; i++) {
     let option = document.createElement('option')
     option.appendChild(document.createTextNode(months[i]))
@@ -142,7 +142,7 @@ Array.from(monthsDropdowns, element => {
 //>>>>>>>>>>>>>> Populate dropdown for days
 const daysDropdowns = document.querySelectorAll('.days')
 Array.from(daysDropdowns, element => {
-  element.appendChild(defaultOption('Days'))
+  element.appendChild(defaultOption('Day'))
   for (i = 1; i <= 31; i++) {
     let option = document.createElement('option')
     option.appendChild(document.createTextNode(i))
