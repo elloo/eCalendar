@@ -1,6 +1,6 @@
 # eCalendar
 
-A project built to demonstrate my HTML, CSS and JavaScript skills.
+A project built to demonstrate my HTML, CSS and JavaScript skills. It follows the specs contained in [this](https://github.com/chingu-voyages/soloproject-tier1-ecalendar) repo from chingu-voyages.
 
 ## Features
 
@@ -9,9 +9,9 @@ A project built to demonstrate my HTML, CSS and JavaScript skills.
 - Dates of previous month if current month does not begin on a Sunday.
 - Current day and date are highlighted.
 - Non-functioning modal form that floats above content.
-  - Able to be closed on blur or via close icon
-  - Hidden when not in use
-- Responsive
+  - Able to be closed on blur or via close icon.
+  - Hidden when not in use.
+- Responsive.
 - Image size optimised.
 
 ## Running the project
@@ -22,3 +22,8 @@ cd eCalendar
 open index.html
 ```
 
+## Screenshots
+
+![Main view](./assets/screen1.png)
+
+![Modal](./assets/screen2.png)
