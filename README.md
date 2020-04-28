@@ -1,6 +1,6 @@
 # eCalendar
 
-[GitHub Repo](https://github.com/elloo/eCalendar)
+[GitHub repo](https://github.com/elloo/eCalendar)
 
 [Live deployment](https://ecalendar-by-ewelin.netlify.app/)
 
