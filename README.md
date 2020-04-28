@@ -1,6 +1,7 @@
 # eCalendar
 
 [GitHub Repo](https://github.com/elloo/eCalendar)
+
 [Live deployment](https://ecalendar-by-ewelin.netlify.app/)
 
 A project built to demonstrate my HTML, CSS and JavaScript skills. It follows the specs contained in [this](https://github.com/chingu-voyages/soloproject-tier1-ecalendar) repo from chingu-voyages.
